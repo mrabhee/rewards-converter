@@ -5,12 +5,12 @@ class RewardValue {
     private double miles;
     private double mtocrate = 0.0035;
 
-    RewardValue(int cash) {
+    RewardValue(double cash) {
         this.cash = cash;
-        this.miles = this.cash * mtocrate;
+        this.miles = cash / mtocrate;
     }
 
-    RewardValue(double miles) {
+    RewardValue(int miles) {
         this.miles = miles;
         this.cash = this.miles * mtocrate;
     }
