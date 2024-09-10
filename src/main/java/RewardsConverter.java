@@ -1,5 +1,33 @@
 import java.util.Scanner;
 
+class RewardValue {
+    private double cash;
+    private double miles;
+    private double mtocrate = 0.0035;
+
+    RewardValue(int cash) {
+        this.cash = cash;
+        this.miles = this.cash * mtocrate;
+    }
+
+    RewardValue(double miles) {
+        this.miles = miles;
+        this.cash = this.miles * mtocrate;
+    }
+
+    double getCashValue() {
+        return this.cash;
+    }
+
+
+    double getMilesValue() {
+        return this.miles;
+    }
+
+
+}
+
+
 public class RewardsConverter {
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
